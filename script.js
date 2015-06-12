@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 			url: 'https://api.forecast.io/forecast/b7cadfacd8c9a274d6aec6b01618e241/' + koordinaten.latitude + ',' + koordinaten.longitude,
 
-			data:
+			data:{
 
 				units: 'si',
 				lang: 'de'
@@ -25,7 +25,7 @@ $(document).ready(function(){
 			console.log(data);
 
 
-		});
+		});	
 
 		//console.log(position);
 		//$('.longitude').text(position.coords.longitude);
