@@ -16,11 +16,11 @@ $(document).ready(function(){
 				units: 'si',
 				lang: 'de'
 
-			}
+			},
 
 			dataType: 'jsonp'
 
-		}).done(function()
+		}).done(function(data) {
 
 			console.log(data);
 
