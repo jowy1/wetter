@@ -25,7 +25,7 @@ $(document).ready(function(){
 
 			console.log(data);
 
-			$('.temperature').text(data.currently.apperentTemperature + '°C');
+			$('.temperature').text(data.currently.apparentTemperature + '°C');
 
 
 		});	
