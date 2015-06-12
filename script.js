@@ -37,7 +37,7 @@ $(document).ready(function(){
 
 				url: 'https://maps.googleapis.com/maps/api/geocode/json',
 
-				data {
+				data: {
 
 					latlng: koordinaten.latitude + ',' + koordinaten.longitude,
 
