@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 			console.log(data);
 
-			$('.temperature').text(data.currently.apparentTemperature) + "°C";
+			$('.temperature').text(data.currently.apparentTemperature + "°C");
 
 
 			//geocode anfrage
