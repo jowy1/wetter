@@ -5,6 +5,7 @@ $(document).ready(function(){
 
 			longitude: position.coords.longitude,
 			latitude: position.coords.latitude
+
 		};
 
 		$.ajax({
@@ -23,6 +24,8 @@ $(document).ready(function(){
 		}).done(function(data) {
 
 			console.log(data);
+
+			$.('.temperature').text(data.currently.apperentTemperature + '°C')
 
 
 		});	
