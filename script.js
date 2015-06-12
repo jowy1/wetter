@@ -49,6 +49,7 @@ $(document).ready(function(){
 			}).done(function(data){
 
 				console.log(data);
+				$('.adress').text(data.results[0].address_components[1].long_name);
 			});
 
 
