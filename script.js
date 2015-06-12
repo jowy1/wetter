@@ -45,6 +45,7 @@ $(document).ready(function(){
 
 					language: 'de'
 				}
+				
 			}).done(function(data){
 
 				console.log(data);
