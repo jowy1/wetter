@@ -8,6 +8,9 @@ $(document).ready(function(){
 
 		};
 
+
+		//forecast io anfrage
+
 		$.ajax({
 
 			url: 'https://api.forecast.io/forecast/b7cadfacd8c9a274d6aec6b01618e241/' + koordinaten.latitude + ',' + koordinaten.longitude,
@@ -25,7 +28,27 @@ $(document).ready(function(){
 
 			console.log(data);
 
-			$('.temperature').text(data.currently.apparentTemperature) + "°C";
+			$('.temperature').text(data.currently.apparentTemperature) + " " + "°C";
+
+
+			//geocode anfrage
+
+			$.ajax({
+
+				url: 'https://maps.googleapis.com/maps/api/geocode/json',
+
+				data {
+
+					latlng: koordinaten.latitude + ',' + koordinaten.longitude,
+
+					key: 'AIzaSyDgYh-UffzCV54XCcReML4WSqyb0_zv8x8',
+
+					language: 'de'
+				}
+			}).done(function(data){
+
+				console.log(data);
+			});
 
 
 		});	
