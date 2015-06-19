@@ -1,4 +1,11 @@
 $(document).ready(function(){
+
+	var icon;
+	var skycons = new Skycons({
+		color: "#bada55",
+		resizeClear: true
+
+});
 	navigator.geolocation.getCurrentPosition(function(position){
 
 		var koordinaten = {
@@ -29,6 +36,11 @@ $(document).ready(function(){
 			console.log(data);
 
 			$('.temperature').text(data.currently.apparentTemperature + "°C");
+			$('.wettertext').text(data.currently.summary);
+
+			icon = data.currently.icon.toUpperCase();
+				skycons.add($('.js-icon')[0], icon);
+				skycons.play();	
 
 
 			//geocode anfrage
@@ -60,4 +72,14 @@ $(document).ready(function(){
 		//$('.latitude').text(position.coords.latitude);
 		//$('.accuracy').text(position.coords.accuracy);
 	});
+
+
+
+
+
+//setTimeout(function(){
+//	skycons.set($('.js-icon')[0], Skycons.PARTLY_CLOUDY_DAY);
+//}, 5000);
+
 });
+

@@ -1,0 +1,20 @@
+
+.temperature{
+
+	font-size: 30px;
+}
+
+
+
+.wettertext{
+	text-align: center;
+}
+
+canvas{
+
+	display: block;
+	height: 128px;
+	width: 128px;
+	margin: 0 auto;
+
+}
